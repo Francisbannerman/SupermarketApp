@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace InventoryUI.Properties {
+namespace DBConnections.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

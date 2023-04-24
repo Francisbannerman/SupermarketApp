@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopDashboardUI", "ShopDash
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryUI", "InventoryUI\InventoryUI.csproj", "{69633089-8620-4DF1-9809-D1E33FB66221}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBConnections", "DBConnections\DBConnections.csproj", "{888EB5DA-C1CF-4774-A65A-BE713975DB52}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{69633089-8620-4DF1-9809-D1E33FB66221}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69633089-8620-4DF1-9809-D1E33FB66221}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69633089-8620-4DF1-9809-D1E33FB66221}.Release|Any CPU.Build.0 = Release|Any CPU
+		{888EB5DA-C1CF-4774-A65A-BE713975DB52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{888EB5DA-C1CF-4774-A65A-BE713975DB52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{888EB5DA-C1CF-4774-A65A-BE713975DB52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{888EB5DA-C1CF-4774-A65A-BE713975DB52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
