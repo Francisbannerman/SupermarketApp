@@ -60,7 +60,6 @@
             // 
             // searchInventoryComboBox
             // 
-            this.searchInventoryComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.inventoryBindingSource, "Name", true));
             this.searchInventoryComboBox.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchInventoryComboBox.FormattingEnabled = true;
             this.searchInventoryComboBox.Location = new System.Drawing.Point(26, 81);
@@ -91,6 +90,7 @@
             this.editInventoryItemButton.TabIndex = 1;
             this.editInventoryItemButton.Text = "Edit Item";
             this.editInventoryItemButton.UseVisualStyleBackColor = false;
+            this.editInventoryItemButton.Click += new System.EventHandler(this.editInventoryItemButton_Click);
             // 
             // deleteInventoryItemButton
             // 
@@ -290,6 +290,7 @@
             this.getAllInventoryButton.TabIndex = 6;
             this.getAllInventoryButton.Text = "Get All Inventory";
             this.getAllInventoryButton.UseVisualStyleBackColor = true;
+            this.getAllInventoryButton.Click += new System.EventHandler(this.getAllInventoryButton_Click);
             // 
             // openInventoryItemButton
             // 

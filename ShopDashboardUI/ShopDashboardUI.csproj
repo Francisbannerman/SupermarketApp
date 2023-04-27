@@ -79,5 +79,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InventoryUI\InventoryUI.csproj">
+      <Project>{69633089-8620-4df1-9809-d1e33fb66221}</Project>
+      <Name>InventoryUI</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
