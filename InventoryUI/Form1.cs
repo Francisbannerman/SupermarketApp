@@ -40,7 +40,6 @@ namespace InventoryUI
         private void LoadDataToSearchInventoryComboBox()
         {
             string query = "SELECT Name FROM dbo.Inventory ORDER By Name ASC";
-            //string query = "SELECT Name FROM dbo.Inventory";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -68,7 +67,7 @@ namespace InventoryUI
 
                 inventoryItemsList.Add(newInventoryItem);
 
-                dataAccess.AddText(newInventoryItem.Name, newInventoryItem.Price, 
+                dataAccess.AddInventory(newInventoryItem.Name, newInventoryItem.Price, 
                     newInventoryItem.Specification, newInventoryItem.ImageURL, newInventoryItem.Description);
 
                 addNewItemNameTextBox.Clear();

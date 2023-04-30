@@ -32,9 +32,11 @@ namespace DBConnections
             this.ConnectionString = connectionString;
         }
 
-        public void AddText(string itemName, double itemPrice, string itemSpecs, string itemURLImage, string itemDescription) //Method that handles the sql connection
+        public void AddInventory(string itemName, double itemPrice, string itemSpecs, string itemURLImage, string itemDescription)
         {
-            string sql = "INSERT INTO dbo.Inventory (Name, Price, Specification, ImageURL, Description) VALUES (@itemName, @itemPrice, @itemSpecs, @itemURLImage, @itemDescription)";
+            string sql = "INSERT INTO dbo.Inventory (Name, Price, Specification, ImageURL, Description) " +
+                "VALUES (@itemName, @itemPrice, @itemSpecs, @itemURLImage, @itemDescription)";
+
             using (SqlConnection connection = new SqlConnection(ConnectionString))
             {
                 using (SqlCommand command = new SqlCommand(sql, connection))
@@ -49,6 +51,29 @@ namespace DBConnections
                     command.ExecuteNonQuery();
                 }
             }
+        }
+
+        public void AddSales(string dateTime, string itemName, double price, int quantity, double priceByQuantity, string amountToPay)
+        {
+            string sql = "INSERT INTO dbo.Sales (DateAndTime, Name, Price, Quantity, PriceByQuantityOfItemAmount, TotalCartedItemsAmount) " +
+                "VALUES (@dateTime, @itemName, @price, @quantity, @priceByQuantity, @amountToPay)";
+
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand(sql, connection))
+                {
+                    command.Parameters.AddWithValue("@dateTime", dateTime);
+                    command.Parameters.AddWithValue("@itemName", itemName);
+                    command.Parameters.AddWithValue("price", price);
+                    command.Parameters.AddWithValue("@quantity", quantity);
+                    command.Parameters.AddWithValue("@priceByQuantity", priceByQuantity);
+                    command.Parameters.AddWithValue("@amountToPay", amountToPay);
+
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                }
+            }
+
         }
     }
 }
